@@ -32,6 +32,11 @@ Using unique ports for each application is a best practice in an environment. Bu
 cd /opt/apache-tomcat-8.5.35/conf
 # update port number in the "connecter port" field in server.xml
 # restart tomcat after configuration update
+
+## create softlinks for start and stop tomcat
+echo $PATH
+example: ln -s /opt/tomcat/apache/bin/startup.sh /usr/local/bin/tomcatup
+         ln -s /opt/tomcat/apache/bin/startup.sh /usr/local/bin/tomcatdown
 tomcatdown
 tomcatup
 ```
