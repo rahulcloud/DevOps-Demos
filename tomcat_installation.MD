@@ -16,7 +16,7 @@ give executing permissions to startup.sh and shutdown.sh which are under bin.
    chmod +x /opt/apache-tomcat-8.5.35/bin/startup.sh shutdown.sh  
 
   
-create link files for tomcat startup.sh and shutdown.sh   
+# create link files for tomcat startup.sh and shutdown.sh   
   
   ln -s /opt/apache-tomcat-8.5.35/bin/startup.sh /usr/local/bin/tomcatup  
   ln -s /opt/apache-tomcat-8.5.35/bin/shutdown.sh /usr/local/bin/tomcatdown  
@@ -41,15 +41,15 @@ http://<Public_IP>:8090
   
 now application is accessible on port 8090. but tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue  
   
-#search for context.xml  
+# search for context.xml  
 find / -name context.xml  
   
-above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory.   
+above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory.     
 After that restart tomcat services to effect these changes  
   
 
 
-Update users information in the tomcat-users.xml file  
+# Update users information in the tomcat-users.xml file  
 goto tomcat home directory and Add below users to conf/tomcat-user.xml file  
   
 	<role rolename="manager-gui"/>  
