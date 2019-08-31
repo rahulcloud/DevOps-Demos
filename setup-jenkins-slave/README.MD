@@ -81,5 +81,5 @@ Configure the node as shown here
 1. Build job
 1. Check "console output"
 
-
+jenkins-slave-01 ALL=(ALL) NOPASSWD: ALL
 
