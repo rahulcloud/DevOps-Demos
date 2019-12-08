@@ -32,6 +32,13 @@ openjdk version "1.8.0_151"
 OpenJDK Runtime Environment (build 1.8.0_151-b12)
 OpenJDK 64-Bit Server VM (build 25.151-b12, mixed mode)
 ```
+## Maven Installation
+```
+sudo wget http://repos.fedorapeople.org/repos/dchen/apache-maven/epel-apache-maven.repo -O /etc/yum.repos.d/epel-apache-maven.repo
+sudo sed -i s/\$releasever/6/g /etc/yum.repos.d/epel-apache-maven.repo
+sudo yum install -y apache-maven
+mvn --version
+```
 
 ## Install Jenkins
 You can install jenkins using the rpm or by setting up the repo. We will setup the repo so that we can update it easily in future.
